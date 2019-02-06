@@ -8,7 +8,15 @@
 </head>
 <body>
     <div id="app">
-        <p>{{ message }}</p>
+        
+        <div v-for="obj in array">
+            <p>{{ obj.text }}</p>
+        </div>
+        
+        <p v-if="seen">{{ message }}</p>
+
+        <input v-model="message" type="text" style="width: 500px;" /> <br>
+
         <button v-on:click="showMessage">Show Message</button>
     </div>
 
